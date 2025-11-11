@@ -58,6 +58,8 @@ Follow these steps to deploy your portfolio to GitHub Pages:
    - `styles.css`
    - `script.js`
    - `README.md`
+   - `Profile.jpeg` (your profile photo)
+   - `QE Tech.pdf` (your resume)
 3. Scroll down and click **"Commit changes"**
 
 #### Option B: Using Git Command Line
@@ -70,7 +72,7 @@ cd /Users/DEV
 git init
 
 # Add all files
-git add index.html styles.css script.js README.md
+git add index.html styles.css script.js README.md "Profile.jpeg" "QE Tech.pdf"
 
 # Commit the files
 git commit -m "Initial portfolio website commit"
@@ -128,20 +130,45 @@ Edit the CSS variables in `styles.css`:
 }
 ```
 
-### Add Your Photo
+### Update Profile Photo
 
-Replace the profile placeholder in `index.html`:
+The profile photo is already integrated! If you need to update it:
 
+1. Replace `Profile.jpeg` with your new photo (keep the same filename)
+2. Or update the filename in `index.html`:
+   ```html
+   <img src="Profile.jpeg" alt="Tushit Dev Maheshkumar" class="profile-photo">
+   ```
+
+### Update Resume
+
+The resume PDF is already linked! To update it:
+
+1. Replace `QE Tech.pdf` with your updated resume (keep the same filename)
+2. Or update the filename in `index.html`:
+   ```html
+   <a href="QE Tech.pdf" download="Tushit_Dev_Resume.pdf">
+   ```
+
+### Add Project Images (Optional Enhancement)
+
+To showcase your Go-Kart design and plant layouts visually:
+
+1. **Add Go-Kart Images:**
+   - Save your Go-kart images as `gokart1.jpg`, `gokart2.jpg`, etc.
+   - Upload them to your portfolio folder
+   - Add them to the Go-Kart project card in `index.html`
+
+2. **Add Plant Layout Images:**
+   - Save your plant layout designs as `layout1.jpg`, `layout2.jpg`, etc.
+   - Upload them to your portfolio folder
+   - Add them to the Caterpillar project card in `index.html`
+
+Example of adding an image to a project:
 ```html
-<div class="profile-placeholder">
-    <i class="fas fa-user-tie"></i>
+<div class="project-images">
+    <img src="gokart1.jpg" alt="Go-Kart Design" style="width: 100%; border-radius: 10px; margin-top: 1rem;">
 </div>
-```
-
-With:
-
-```html
-<img src="your-photo.jpg" alt="Tushit Dev" style="width: 250px; height: 250px; border-radius: 50%; object-fit: cover;">
 ```
 
 ## 📱 Browser Support
@@ -186,6 +213,8 @@ portfolio/
 ├── index.html          # Main HTML file
 ├── styles.css          # Stylesheet
 ├── script.js           # JavaScript functionality
+├── Profile.jpeg        # Profile photo
+├── QE Tech.pdf         # Resume PDF
 └── README.md          # Documentation
 ```
 
