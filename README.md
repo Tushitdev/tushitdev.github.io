@@ -110,7 +110,11 @@ For example: `https://tushitdev.github.io`
    <a href="tel:+1234567890">+1 234-567-0890</a>
    ```
 
-2. **LinkedIn & GitHub Links** - Update in the contact and footer sections:
+2. **LinkedIn & GitHub Links** - Already configured:
+   - LinkedIn: https://www.linkedin.com/in/tushit-dev-maheshkumar/
+   - GitHub: https://github.com/tushitdev
+   
+   To update in the contact and footer sections:
    ```html
    <a href="https://www.linkedin.com/in/your-profile">LinkedIn</a>
    <a href="https://github.com/your-username">GitHub</a>
@@ -237,7 +241,7 @@ This project is open source and available under the [MIT License](LICENSE).
 
 - Email: tushitdev1582@gmail.com
 - Phone: +1 248-417-0323
-- LinkedIn: [linkedin.com/in/tushit-dev](https://www.linkedin.com/in/tushit-dev)
+- LinkedIn: [linkedin.com/in/tushit-dev-maheshkumar](https://www.linkedin.com/in/tushit-dev-maheshkumar/)
 - Location: Michigan, USA
 
 ## 🙏 Acknowledgments
