@@ -237,6 +237,13 @@ const statsObserver = new IntersectionObserver((entries) => {
         if (entry.isIntersecting) {
             const statItems = entry.target.querySelectorAll('.stat-item h3');
             statItems.forEach(item => {
+                // Skip animation for "Years Experience" stat
+                const statItem = item.closest('.stat-item');
+                const statLabel = statItem ? statItem.querySelector('p') : null;
+                if (statLabel && statLabel.textContent.includes('Years Experience')) {
+                    return; // Skip this stat item
+                }
+                
                 const text = item.textContent;
                 const number = parseInt(text);
                 if (!isNaN(number)) {
