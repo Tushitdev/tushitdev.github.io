@@ -107,12 +107,11 @@ contactForm.addEventListener('submit', (e) => {
     const formData = {
         name: document.getElementById('name').value,
         email: document.getElementById('email').value,
-        subject: document.getElementById('subject').value,
         message: document.getElementById('message').value
     };
     
     // Create mailto link
-    const mailtoLink = `mailto:tushitdev1582@gmail.com?subject=${encodeURIComponent(formData.subject)}&body=${encodeURIComponent(
+    const mailtoLink = `mailto:tushitdev1582@gmail.com?subject=${encodeURIComponent('Contact from Portfolio')}&body=${encodeURIComponent(
         `Name: ${formData.name}\nEmail: ${formData.email}\n\nMessage:\n${formData.message}`
     )}`;
     
