@@ -1174,7 +1174,7 @@ section {
 
 .education-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(380px, 1fr));
+    grid-template-columns: 1fr 1fr 2fr;
     gap: 2.5rem;
     position: relative;
     z-index: 1;
