@@ -175,10 +175,60 @@ body {
     50% { opacity: 0.6; }
 }
 
+.hero-main {
+    display: flex;
+    align-items: center;
+    gap: 4rem;
+    margin-bottom: 3rem;
+    position: relative;
+    z-index: 1;
+}
+
+.hero-profile {
+    flex-shrink: 0;
+    animation: fadeIn 1s ease;
+}
+
+.hero-profile-photo {
+    width: 280px;
+    height: 280px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 5px solid rgba(255, 255, 255, 0.2);
+    box-shadow: 0 10px 40px rgba(236, 72, 153, 0.4), 0 0 60px rgba(99, 102, 241, 0.3);
+    transition: var(--transition);
+    animation: profileGlow 3s ease-in-out infinite;
+}
+
+.hero-profile-photo:hover {
+    transform: scale(1.05);
+    box-shadow: 0 15px 50px rgba(236, 72, 153, 0.6), 0 0 80px rgba(99, 102, 241, 0.5);
+}
+
+@keyframes profileGlow {
+    0%, 100% {
+        box-shadow: 0 10px 40px rgba(236, 72, 153, 0.4), 0 0 60px rgba(99, 102, 241, 0.3);
+    }
+    50% {
+        box-shadow: 0 15px 50px rgba(236, 72, 153, 0.6), 0 0 80px rgba(139, 92, 246, 0.5);
+    }
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
 .hero-content {
     animation: fadeInUp 1s ease;
     position: relative;
     z-index: 1;
+    text-align: left;
+    flex: 1;
 }
 
 .hero-title {
@@ -373,12 +423,14 @@ section {
 }
 
 .about-content {
-    display: grid;
-    grid-template-columns: 1fr 2fr;
-    gap: 4rem;
-    align-items: start;
+    max-width: 1200px;
+    margin: 0 auto;
     position: relative;
     z-index: 1;
+}
+
+.about-text {
+    width: 100%;
 }
 
 .about-image {
@@ -806,15 +858,16 @@ section {
 }
 
 .skills-layout {
-    display: grid;
-    grid-template-columns: 1fr 2fr;
-    gap: 4rem;
-    align-items: start;
+    max-width: 1200px;
+    margin: 0 auto;
 }
 
 .skills-header {
-    position: sticky;
-    top: 100px;
+    text-align: center;
+    margin-bottom: 3rem;
+    max-width: 900px;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 .skills-main-title {
@@ -833,7 +886,7 @@ section {
 
 .skills-cards-grid {
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: repeat(3, 1fr);
     gap: 2rem;
 }
 
@@ -1477,8 +1530,18 @@ section {
         grid-template-columns: 1fr;
     }
 
-    .about-content {
-        grid-template-columns: 1fr;
+    .hero-main {
+        flex-direction: column;
+        gap: 2rem;
+    }
+    
+    .hero-profile-photo {
+        width: 200px;
+        height: 200px;
+    }
+    
+    .hero-content {
+        text-align: center;
     }
 
     .about-stats {
@@ -1490,7 +1553,7 @@ section {
     }
     
     .skills-cards-grid {
-        grid-template-columns: 1fr;
+        grid-template-columns: repeat(2, 1fr);
     }
     
     .expertise-items {
@@ -1513,15 +1576,6 @@ section {
         left: 1px;
     }
 
-    .skills-layout {
-        grid-template-columns: 1fr;
-        gap: 3rem;
-    }
-    
-    .skills-header {
-        position: static;
-    }
-    
     .skills-main-title {
         font-size: 2.5rem;
     }
@@ -1555,6 +1609,11 @@ section {
     .hero-title {
         font-size: 1.5rem;
     }
+    
+    .hero-profile-photo {
+        width: 150px;
+        height: 150px;
+    }
 
     .hero-buttons {
         flex-direction: column;
@@ -1569,6 +1628,10 @@ section {
     }
     
     .achievements-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .skills-cards-grid {
         grid-template-columns: 1fr;
     }
 
