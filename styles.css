@@ -1227,8 +1227,8 @@ section {
 
 .certifications-list {
     display: grid;
-    grid-template-columns: 1fr;
-    gap: 1rem;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.5rem;
     margin-top: 1rem;
 }
 
@@ -1236,37 +1236,50 @@ section {
     display: flex;
     align-items: start;
     gap: 1rem;
-    padding: 1.2rem;
+    padding: 1.5rem;
     background: linear-gradient(135deg, rgba(236, 72, 153, 0.1), rgba(139, 92, 246, 0.1));
     border-radius: 12px;
     border: 1px solid rgba(236, 72, 153, 0.3);
     transition: var(--transition);
+    min-height: 100px;
+    flex-direction: column;
+    text-align: center;
 }
 
 .cert-item:hover {
     background: linear-gradient(135deg, rgba(236, 72, 153, 0.2), rgba(139, 92, 246, 0.2));
-    transform: translateX(5px);
+    transform: translateY(-5px);
     border-color: rgba(236, 72, 153, 0.5);
+    box-shadow: 0 8px 20px rgba(236, 72, 153, 0.3);
 }
 
 .cert-item i {
     color: #fbbf24;
-    font-size: 1.8rem;
-    margin-top: 0.3rem;
+    font-size: 2rem;
+    margin: 0 auto 0.5rem;
     filter: drop-shadow(0 0 10px rgba(251, 191, 36, 0.5));
+    display: block;
+}
+
+.cert-item > div {
+    width: 100%;
+    text-align: center;
 }
 
 .cert-item strong {
     display: block;
     color: var(--white);
-    margin-bottom: 0.3rem;
+    margin-bottom: 0.5rem;
     font-size: 1rem;
     font-weight: 600;
+    line-height: 1.4;
 }
 
 .cert-item span {
     color: rgba(255, 255, 255, 0.7);
     font-size: 0.85rem;
+    display: block;
+    line-height: 1.4;
 }
 
 /* Contact Section - Black Theme */
@@ -1591,6 +1604,10 @@ section {
     .education-grid {
         grid-template-columns: 1fr;
     }
+    
+    .certifications-list {
+        grid-template-columns: repeat(2, 1fr);
+    }
 
     .coursework ul {
         grid-template-columns: 1fr;
@@ -1632,6 +1649,10 @@ section {
     }
     
     .skills-cards-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .certifications-list {
         grid-template-columns: 1fr;
     }
 
