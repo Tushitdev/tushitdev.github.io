@@ -468,7 +468,7 @@ section {
 
 .about-stats {
     display: grid;
-    grid-template-columns: repeat(4, 1fr);
+    grid-template-columns: repeat(3, 1fr);
     gap: 1.5rem;
     margin-bottom: 2rem;
 }
@@ -555,6 +555,24 @@ section {
 .company-logo:hover {
     transform: scale(1.1) rotate(5deg);
     box-shadow: 0 8px 25px rgba(99, 102, 241, 0.5);
+}
+
+.company-logo-img {
+    width: 70px;
+    height: 70px;
+    object-fit: contain;
+    border-radius: 8px;
+    background: rgba(255, 255, 255, 0.05);
+    padding: 8px;
+    flex-shrink: 0;
+    transition: var(--transition);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+}
+
+.company-logo-img:hover {
+    transform: scale(1.1);
+    box-shadow: 0 6px 20px rgba(99, 102, 241, 0.4);
+    background: rgba(255, 255, 255, 0.1);
 }
 
 /* Key Achievements Section */
